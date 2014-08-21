@@ -1,0 +1,19 @@
+  <form action="/posts" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="post[title]" id="title">
+
+    <label for="author">Author</label>
+    <input type="text" name="post[author]" id="author">
+
+    <label for="content">Content</label>
+    <textarea name="post[content]" id="content"></textarea>
+
+    <label for="tag">Add Tags</label>
+    <input type= "text" name="tag[name]" id= "tag">
+		<%= token_tag form_authenticity_token%>
+		<!-- need to add this to verify the form came from your website. deals with ActionController::InvalidAuthenticityToken -->
+    <button> Save Post </button>
+  </form>
+
+
+  <a href="/">Back Home</a>
