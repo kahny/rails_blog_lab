@@ -1,11 +1,13 @@
-<h1><%= @tag.name %></h1>
-<!-- #Tag.find(@tag.id).posts[0].title  -->
+<div class="container">
+	<h1><%= @tag.name %></h1>
+	<!-- #Tag.find(@tag.id).posts[0].title  -->
 
-<% @tag.posts.each do |post| %>
-	<h3><a href="/posts/<%= post.id %>"><%= post.title %></h3></a>
-	<p><%= post.author %></p>
-	<p><%= post.content %></p>
-<% end %>
+	<% @tag.posts.each do |post| %>
+		<h3><a href="/posts/<%= post.id %>"><%= post.title %></h3></a>
+		<p><%= post.author %></p>
+		<p><%= post.content %></p>
+	<% end %>
 
 
-<a href="/">Home</a>
+	<a href="/">Home</a>
+</div>

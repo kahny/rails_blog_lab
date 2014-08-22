@@ -1,0 +1,15 @@
+<!-- tag.html.erb
+ -->
+
+<div class="container">
+
+ <h1>Tag list</h1>
+
+	<% @all_tags.each do |tag| %>
+		<div>
+			<h4><a href="/tags/<%= tag.id %>"><%= tag.name %> </h4>
+		</div>
+	<% end %>
+
+	<a href="/posts/new">Create a new post </a>
+</div>

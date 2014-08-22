@@ -1,0 +1,21 @@
+<!-- index.html.erb -->
+
+<div class="container">
+	<h2>Post: <%=@post.title%> </h2>
+ 	<p><%= @post.content %></p>
+	<br>
+	<h2>Comments:</h2>
+	<% @comments.each do |comment| %>
+		<div>
+			<h4><%= comment.title %> </h4>
+			<p><%= comment.body %></p>
+		</div>
+	<% end %>
+
+<br>
+<a href="/posts/<%=@post.id%>/comments/new">Add a comment</a>
+<br><br>
+	<a href="/posts/new">Create a new post </a>
+	<br>
+	<a href="/">Back Home </a>
+</div>
